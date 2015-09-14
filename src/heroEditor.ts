@@ -14,7 +14,7 @@ import {Hero} from './hero';
       <span>Name:</span>
       <input [(ng-model)]="hero.name"/>
       <div>
-        <button (click)="saved.next(hero)">save</button>
+        <button (click)="onSaved()">save</button>
         <button (click)="onCanceled()">cancel</button>
       </div>
     </div>`,

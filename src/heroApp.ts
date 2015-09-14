@@ -1,6 +1,5 @@
 import {Component, View, bootstrap, CORE_DIRECTIVES} from 'angular2/angular2';
 import {HeroesService} from './heroesService';
-import {RestoreService} from './restoreService';
 import {HeroCard} from './heroCard';
 import {Hero} from './hero';
 
