@@ -12,8 +12,15 @@ import {Hero} from './hero';
     <div>
       <ul>
         <li *ng-for="#editItem of heroes">
-          <hero-card-component [hidden]="editItem.editing" [hero]="editItem.item"></hero-card-component>
-          <button [hidden]="editItem.editing" (click)="editItem.editing = true">edit</button>
+          <hero-card-component
+            [hidden]="editItem.editing"
+            [hero]="editItem.item">
+          </hero-card-component>
+          <button
+            [hidden]="editItem.editing"
+            (click)="editItem.editing = true">
+              edit
+          </button>
           <hero-editor-component
             (saved)="onSaved(editItem, $event)"
             (canceled)="onCanceled(editItem)"
