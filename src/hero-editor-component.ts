@@ -1,9 +1,9 @@
 import {Component, View, FORM_DIRECTIVES, EventEmitter, bootstrap, CORE_DIRECTIVES} from 'angular2/angular2';
-import {RestoreService} from './restoreService';
+import {RestoreService} from './restore-service';
 import {Hero} from './hero';
 
 @Component({
-  selector: 'hero-editor',
+  selector: 'hero-editor-component',
   events: ['canceled', 'saved'],
   properties: ['hero'],
   bindings: [RestoreService]
@@ -20,7 +20,7 @@ import {Hero} from './hero';
     </div>`,
   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
-export class HeroEditor {
+export class HeroEditorComponent {
   canceled = new EventEmitter();
   saved = new EventEmitter();
 

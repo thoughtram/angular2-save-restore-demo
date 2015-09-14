@@ -15,11 +15,11 @@
         "!./node_modules/**/*.ts"
     ],
     "files": [
+        "./hero-card-component.ts",
+        "./hero-editor-component.ts",
         "./hero.ts",
-        "./heroApp.ts",
-        "./heroCard.ts",
-        "./heroEditor.ts",
-        "./heroesService.ts",
-        "./restoreService.ts"
+        "./heroes-list-component.ts",
+        "./heroes-service.ts",
+        "./restore-service.ts"
     ]
 }
