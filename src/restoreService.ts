@@ -1,18 +1,18 @@
 export class RestoreService<T> {
-  item: T;
-  cachedItem: T;
+  originalItem: T;
+  currentItem: T;
 
   setItem (item: T) {
-    this.item = item;
-    this.cachedItem = this.clone(item);
+    this.originalItem = item;
+    this.currentItem = this.clone(item);
   }
 
   getItem () :T {
-    return this.item;
+    return this.currentItem;
   }
 
   restoreItem () :T {
-    this.item = this.cachedItem;
+    this.currentItem = this.originalItem;
     return this.getItem();
   }
 

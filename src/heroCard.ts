@@ -14,7 +14,7 @@ import {Hero} from './hero';
       <button [hidden]="editMode" (click)="editMode = !editMode">edit</button>
     </div>
     <hero-editor
-      (saved)="saved()"
+      (saved)="saved($event)"
       (canceled)="canceled($event)"
       [hidden]="!editMode"
       [hero]="hero">
@@ -26,12 +26,12 @@ export class HeroCard {
   hero: Hero;
   editMode: boolean
 
-  saved () {
+  saved (updatedHero: Hero) {
+    this.hero = updatedHero;
     this.editMode = false;
   }
 
   canceled (previousHero: Hero) {
-    this.hero = previousHero;
     this.editMode = false;
   }
 }

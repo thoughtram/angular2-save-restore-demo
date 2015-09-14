@@ -34,6 +34,10 @@ export class HeroEditor {
     return this.restoreService.getItem();
   }
 
+  onSaved () {
+    this.saved.next(this.restoreService.getItem());
+  }
+
   onCanceled () {
     this.hero = this.restoreService.restoreItem();
     this.canceled.next(this.hero);
